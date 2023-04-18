@@ -1,0 +1,11 @@
+<!-- Display post details -->
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+
+<!-- Display related comments -->
+<h2>Comments</h2>
+<ul>
+    {% for comment in post.comments.all %}
+    <li>{{ comment.content }}</li>
+    {% endfor %}
+</ul>
