@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import PostViewSet, CommentViewSet, post_detail, postView, addPost,submit_form
+from .views import PostViewSet, CommentViewSet, post_detail, postView, addPost, submit_form
 
 
 router = DefaultRouter()
@@ -14,7 +14,7 @@ urlpatterns = [
     path('postd/<int:id>', post_detail),
     path('postview/', postView),
     path('addpost/', addPost),
-    path('submit_form/',submit_form),
-     
+    path('submit_form/', submit_form),
+
 
 ]

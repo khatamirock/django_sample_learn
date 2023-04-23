@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POSTS-line</title>
     {% load static %}
+    <script src="{% static 'js/script.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
@@ -14,13 +15,13 @@
     <div class="navbar">
         <h2>POSTER</h2>
         <ul>
-            <li>Addpost</li>
-            <li>Posts</li>
+            <li data-pos="addpost"> Addpost</li>
+            <li data-pos="postview">Posts</li>
         </ul>
     </div>
 
     {% for post in posts %}
-    <div class="postview">
+    <div class="postview" data-postid="{{ post.id }}">
         <div class="titledate">
             <h2>{{post.title}}</h2>
             <p>{{post.date_posted}}</p>

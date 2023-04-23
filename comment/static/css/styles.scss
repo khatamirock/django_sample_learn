@@ -13,6 +13,7 @@ h1 {
 }
 
 .navbar {
+
     padding: 26px;
     background: deepskyblue;
     display: flex;
@@ -20,12 +21,13 @@ h1 {
     align-items: center;
 
     ul {
+
         display: flex;
         justify-content: flex-end;
     }
 
     li {
-
+        cursor: pointer;
         margin: 0 10px;
         list-style: none;
     }
