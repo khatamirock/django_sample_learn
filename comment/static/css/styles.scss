@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0 !important;
+    margin-top: 10px !important;
+}
+
+h1 {
+    margin-bottom: 0 !important;
+}
+
+.navbar {
+    padding: 26px;
+    background: deepskyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    li {
+
+        margin: 0 10px;
+        list-style: none;
+    }
+
+}
+
+.postsec {
+    background-color: red;
+    display: grid;
+    /* make the items display in center vertically */
+
+
+}
+
+
+
+.postview {
+    border-radius: 8px;
+    padding: 10px 22px;
+    background: red;
+    margin: 13px 15px;
+
+    .titledate {
+        p {
+            margin-top: 0 !important;
+            color: yellow;
+        }
+    }
+
+    h2 {
+        margin: 0px !important;
+    }
+}

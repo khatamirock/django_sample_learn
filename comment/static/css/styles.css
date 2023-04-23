@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0 !important;
+  margin-top: 10px !important;
+}
+
+h1 {
+  margin-bottom: 0 !important;
+}
+
+.navbar {
+  padding: 26px;
+  background: deepskyblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar li {
+  margin: 0 10px;
+  list-style: none;
+}
+
+.postsec {
+  background-color: red;
+  display: -ms-grid;
+  display: grid;
+  /* make the items display in center vertically */
+}
+
+.postview {
+  border-radius: 8px;
+  padding: 10px 22px;
+  background: red;
+  margin: 13px 15px;
+}
+
+.postview .titledate p {
+  margin-top: 0 !important;
+  color: yellow;
+}
+
+.postview h2 {
+  margin: 0px !important;
+}
+/*# sourceMappingURL=styles.css.map */

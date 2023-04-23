@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSTS-line</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <div class="navbar">
+        <h2>POSTER</h2>
+        <ul>
+            <li>Addpost</li>
+            <li>Posts</li>
+        </ul>
+    </div>
+
+    {% for post in posts %}
+    <div class="postview">
+        <div class="titledate">
+            <h2>{{post.title}}</h2>
+            <p>{{post.date_posted}}</p>
+        </div>
+
+        <p>{{post.content}}</p>
+
+    </div>
+    {% endfor %}
+
+    <!-- add js file -->
+
+
+</body>
+
+</html>

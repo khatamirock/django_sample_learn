@@ -8,8 +8,9 @@ def mamas(request):
     return HttpResponse('maama kmn acoo')
 
 
-def gen2(request):
-    return render(request, 'gen2.html')
+def gen2(request, name):
+    print(name)
+    return HttpResponse('kmn acoo {}'.format(name))
 
 # create a function the receives an int. and return the square of that int.
 
