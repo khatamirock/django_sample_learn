@@ -8,22 +8,37 @@
     <title>Document</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
 </head>
 
 <body>
+    <div class="containerr">
+        <div class="postsection">
+            <div class="postsec" data-postid="{{ post.id }}">
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.content }}</p>
+            </div>
 
-    <div class="postsec" data-postid="{{ post.id }}">
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.content }}</p>
+
+            <h2>Comments</h2>
+            <ul>
+                {% for comment in comments %}
+                <li>{{ comment.content }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="commentsection">
+            <form method="POST" action="/api/add_comment/">
+                {% csrf_token %}
+                <input type="hidden" name="post_id" value="{{ post.id }}">
+                <textarea name="content"></textarea>
+                <button name={post.id} data-postid={{post.id}}>comment</button>
+            </form>
+
+        </div>
+
     </div>
 
-
-    <h2>Comments</h2>
-    <ul>
-        {% for comment in comments %}
-        <li>{{ comment.content }}</li>
-        {% endfor %}
-    </ul>
 </body>
 
 </html>

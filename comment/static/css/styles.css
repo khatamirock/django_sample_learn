@@ -41,13 +41,6 @@ h1 {
   list-style: none;
 }
 
-.postsec {
-  background-color: red;
-  display: -ms-grid;
-  display: grid;
-  /* make the items display in center vertically */
-}
-
 .postview {
   border-radius: 8px;
   padding: 10px 22px;
@@ -62,5 +55,21 @@ h1 {
 
 .postview h2 {
   margin: 0px !important;
+}
+
+.containerr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.postsec {
+  background-color: red;
+  display: -ms-grid;
+  display: grid;
+  /* make the items display in center vertically */
 }
 /*# sourceMappingURL=styles.css.map */

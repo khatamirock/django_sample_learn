@@ -34,14 +34,6 @@ h1 {
 
 }
 
-.postsec {
-    background-color: red;
-    display: grid;
-    /* make the items display in center vertically */
-
-
-}
-
 
 
 .postview {
@@ -60,4 +52,18 @@ h1 {
     h2 {
         margin: 0px !important;
     }
+}
+
+// post...
+.containerr {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.postsec {
+    background-color: red;
+    display: grid;
+    /* make the items display in center vertically */
+
+
 }

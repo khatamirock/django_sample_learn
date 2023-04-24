@@ -1,13 +1,14 @@
 
 from email.policy import HTTP
 from urllib import request
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework import viewsets
 from .models import Post, Comment
 from rest_framework.decorators import action
 from .serializers import PostSerializer, CommentSerializer
 from django.http import HttpResponse
 # Create your views here.
+from django.http import HttpResponse, JsonResponse
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -45,9 +46,19 @@ def submit_form(request):
         title = request.POST['title']
         content = request.POST['content']
         print(title, content)
-        post=Post(title=title, content=content)
+        post = Post(title=title, content=content)
         post.save()
         return postView(request)
+
+
+def add_comment(request):
+    if request.method == 'POST':
+        content = request.POST.get('content')
+        id = request.POST.get('post_id')
+        post = Post.objects.get(id=id)
+        comment = Comment(content=content, post=post)
+        comment.save()
+        return redirect('/api/postd/{}'.format(id))
 
 
 class CommentViewSet(viewsets.ModelViewSet):
