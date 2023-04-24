@@ -12,13 +12,8 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <h2>POSTER</h2>
-        <ul>
-            <li data-pos="addpost"> Addpost</li>
-            <li data-pos="postview">Posts</li>
-        </ul>
-    </div>
+    {% include 'navbar.html' %}
+
 
     {% for post in posts %}
     <div class="postview" data-postid="{{ post.id }}">
